@@ -12,5 +12,9 @@ characterName VARCHAR(255),
 characterPhysique INT,
 characterSocial INT,
 characterMental INT,
-characterStory INT
+characterStory VARCHAR(255)
 );
+
+/*données de test */
+
+INSERT INTO Characters (`id`, `characterName`, `characterPhysique`, `characterSocial`, `characterMental`, `characterStory`) VALUES (1, 'Tirry', 10, 50, 30, 'paysan de Memoria');
