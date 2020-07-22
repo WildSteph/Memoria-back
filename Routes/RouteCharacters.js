@@ -45,4 +45,22 @@ router.post('/', (req, res) => {
   });
 });
 
+router.put('/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const formData = req.body;
+  connection.query('UPDATE  Characters SET ? WHERE id = ?', [formData, id], (err, results) => {
+    if (err) {
+      return (
+        res.status(500).json({message: "Internal server error"})
+      )
+    } 
+    if (results.changedRows === 0) {
+      return (
+        res.status(404).json({message: 'User ID not found'})
+      )
+    }
+    res.status(200).json({message: `Changed row ${results.changedRows}`});
+  });
+});
+
 module.exports = router; 

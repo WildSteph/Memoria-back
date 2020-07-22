@@ -16,3 +16,16 @@ Content-Type: application/json
     "characterMental": 30,
     "characterStory": "ancein gerrier de memoria reconverte dans me mersenaria"
 }
+
+
+###PUT 1 Character
+PUT http://localhost:8000/characters/2
+Content-Type: application/json
+
+{
+    "characterName": "Eldar",
+    "characterPhysique": 40,
+    "characterSocial": 30,
+    "characterMental": 30,
+    "characterStory": "Premier homme dechu"
+}
