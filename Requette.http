@@ -1,0 +1,2 @@
+###Look table
+GET http://localhost:8000/characters
