@@ -1,6 +1,18 @@
-###Look table
+###Look all Characters
 GET http://localhost:8000/characters
 
 
-###Look table
+###Look 1 Character
 GET http://localhost:8000/characters/1
+
+###Post 1 Character
+POST http://localhost:8000/characters
+Content-Type: application/json
+
+{
+    "characterName": "Horick",
+    "characterPhysique": 40,
+    "characterSocial": 30,
+    "characterMental": 30,
+    "characterStory": "ancein gerrier de memoria reconverte dans me mersenaria"
+}

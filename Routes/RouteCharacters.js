@@ -30,4 +30,19 @@ router.get('/:id', (req, res) => {
   })
 });
 
+router.post('/', (req, res) => {
+  const formData = req.body;
+  connection.query('INSERT INTO Characters SET ?', formData, (err, results) => {
+    if (err) {
+      return (
+        res.status(500).json({ message: "Internal server error" })
+      )
+    } else {
+      return (
+        res.status(201).json({ ...formData, id: results.insertId })
+      )
+    }
+  });
+});
+
 module.exports = router; 
