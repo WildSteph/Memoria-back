@@ -29,3 +29,7 @@ Content-Type: application/json
     "characterMental": 30,
     "characterStory": "Premier homme dechu"
 }
+
+###delette 1 Character
+
+DELETE http://localhost:8000/characters/2
