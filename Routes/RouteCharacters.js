@@ -45,7 +45,7 @@ router.post('/', (req, res) => {
   });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/put/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const formData = req.body;
   connection.query('UPDATE  Characters SET ? WHERE id = ?', [formData, id], (err, results) => {
@@ -60,6 +60,20 @@ router.put('/:id', (req, res) => {
       )
     }
     res.status(200).json({message: `Changed row ${results.changedRows}`});
+  });
+});
+
+router.delete('/del/:id', (req, res) => {
+  const id = req.params.id
+
+  connection.query('DELETE FROM Characters WHERE id = ?', [id], err => {
+    if (err) {
+      return (
+        res.status(500).json({message: "Internal server error"})
+      )
+      } else {
+        res.sendStatus(200);
+      }  
   });
 });
 
