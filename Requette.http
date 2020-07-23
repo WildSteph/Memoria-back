@@ -19,7 +19,7 @@ Content-Type: application/json
 
 
 ###PUT 1 Character
-PUT http://localhost:8000/characters/2
+PUT http://localhost:8000/put/characters/2
 Content-Type: application/json
 
 {
@@ -32,4 +32,4 @@ Content-Type: application/json
 
 ###delette 1 Character
 
-DELETE http://localhost:8000/characters/2
+DELETE http://localhost:8000/del/characters/2
