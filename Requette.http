@@ -3,7 +3,7 @@ GET http://localhost:8000/characters
 
 
 ###Look 1 Character
-GET http://localhost:8000/characters/1
+GET http://localhost:8000/characters/19
 
 ###Post 1 Character
 POST http://localhost:8000/characters
